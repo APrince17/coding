@@ -1,0 +1,34 @@
+foodlist = ['apple','ice cream','cereal','grape']
+
+print ("First item", foodlist[0])
+print ("Last item", foodlist[3])
+
+def replaceitem():
+    foodlist[1] = 'banana'
+    print(foodlist)
+    print ("replaced ice cream with bannana")
+def slice():
+    print(foodlist[1:3])
+
+replaceitem()
+slice()
+
+# Activity two
+
+foodlistmorning = ['pancakes', 'cereal', 'eggs']
+foodlistafternoon = ['sandwich', 'salad', 'soup']
+foodlistevening = ['pasta', 'chicken', 'fish']
+
+
+def menu(timeofday):
+    if timeofday == 'morning':
+        print(foodlistmorning)
+    elif timeofday == 'afternoon':
+        print(foodlistafternoon)
+    elif timeofday == 'evening':
+            print("It is dinner time! ")
+            print(foodlistevening)
+    else:
+        print('Not a valid time of day')
+
+menu(input("What time of the day is it? "))
