@@ -1,0 +1,13 @@
+shoppingcart = ['water','ice','cereal','apples']
+
+# Accessing items in a list- when we want to access an item in a list we write the variable name and then use the square brackets
+
+print(shoppingcart[0]) # prints the first item in the list
+
+def additemtocart():
+    bestBuyCart= ['monitor', 'card','speaker', 'controller']
+
+# create a function that adds new numbers in a list then puts the list in order from least to greatest, 60 and needs to pass as a peramiter
+numberslist = [100, 23, 450, 63, 1, 6, 19, 1000]
+def addnumber(newnumber):
+    numberslist.append(newnumber)
