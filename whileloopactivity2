@@ -1,0 +1,14 @@
+thelist = []
+quit = False
+while quit == False:
+    userinput = input("Type a number or quit: ")
+    if userinput == "quit":
+        quit = True
+    else:
+        thelist.append(userinput)
+        print(thelist)
+
+i = 1 
+while i < 10: 
+    print(i)
+    i = i + int(input("enter a number: "))
