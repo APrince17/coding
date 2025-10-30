@@ -1,3 +1,6 @@
+
+# Activity 1
+
 thelist = []
 quit = False
 while quit == False:
@@ -12,3 +15,41 @@ i = 1
 while i < 10: 
     print(i)
     i = i + int(input("enter a number: "))
+
+#Activity 2
+
+ #Loops untill the condition is no longer true
+
+ageverification = 17
+purchaserage = int(input("Please enter your age: "))
+
+while ageverification >= purchaserage:
+    print("You are not old enough to purchase this item")
+else: 
+    print("You are old enough to purchase this item")
+
+
+savepassword = "password123"
+userpassword = input("Enter your password: ")
+attempts = 0
+while savepassword != userpassword and attempts < 3:
+    userpassword = input("Incorrect password, please try again: ")
+    attempts += 1
+if attempts == 3:
+    print("Too many attempts, account locked.")
+else:
+    print("Welcome back!")
+
+# Activity 3
+
+guessednumber = False
+while guessednumber == False:
+    player = input("Pick a number between 1 and 10: ")
+    if player == "7":
+        print("You guessed the correct number!")
+        guessednumber = True
+    else:
+        if player < "7":
+            print("Your guess is less than the number, try again.")
+        else:
+            print("Your guess is more than the number, try again.")
