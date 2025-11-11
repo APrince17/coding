@@ -1,21 +1,17 @@
 # Question 1
 def check_submissions():
 
-    cw = input("Did you submit your class work? (yes/no): ").strip().lower()
-    hw = input("Did you submit your homework? (yes/no): ").strip().lower()
+    cw = input("Did you submit your class work? (yes/no): ")
+    hw = input("Did you submit your homework? (yes/no): ")
 
-    submitted_cw = cw in ("yes", "y", "true", "1")
-    submitted_hw = hw in ("yes", "y", "true", "1")
-
-    if submitted_cw and submitted_hw:
+    if cw == "yes" and hw == "yes":
         print("Great! You submitted both class work and homework.")
-    elif submitted_cw and not submitted_hw:
+    elif cw == "yes" and hw == "no":
         print("You submitted class work but not homework.")
-    elif submitted_hw and not submitted_cw:
+    elif hw == "yes" and cw == "no":
         print("You submitted homework but not class work.")
     else:
         print("You did not submit class work or homework.")
-
 
 # Question 2
 def reverse_string(s: str) -> str:
@@ -25,12 +21,9 @@ def reverse_string(s: str) -> str:
     """
     return s[::-1]
 
-
 def reverse_input():
     s = input("Type a word: ")
     print("Reversed:", reverse_string(s))
-
-
 
 check_submissions()
 
@@ -38,6 +31,7 @@ reverse_input()
 
 
 guessednumber = False
+attempts = 0
 
 # Question 3
 def guess_number_game():
@@ -47,10 +41,13 @@ while guessednumber == False:
     if player == "7":
         print("You guessed the correct number!")
         guessednumber = True
+        attempts += 1
+        print("You took", attempts, "attempt(s) to guess the number.")
     else:
         if player < "7":
             print("Your guess is less than the number, try again.")
+            attempts += 1
         else:
             print("Your guess is more than the number, try again.")
-
+            attempts += 1
 guess_number_game()
